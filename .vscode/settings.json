@@ -1,0 +1,6 @@
+{
+    "cSpell.enabledFileTypes": {
+        "tlaplus": false
+    },
+    "tlaplus.tlc.modelChecker.options": "-coverage 1"
+}

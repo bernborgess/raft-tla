@@ -468,4 +468,10 @@ Next == /\ \/ \E i \in Server : Restart(i)
 \* to Next.
 Spec == Init /\ [][Next]_vars
 
+NoTwoLeaders ==
+    \A i, j \in Server :
+        /\ i /= j
+        => ~(/\ currentTerm[i] = currentTerm[j]
+             /\ state[i] = Leader
+             /\ state[j] = Leader)
 ===============================================================================
